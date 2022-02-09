@@ -9,4 +9,4 @@ The script.py is specifically written to solve this problem. It will allow you t
 
 ## Method
 
-The script uses a recursive function to parse the nested JSON files. The idea behind recursive funciton is fairly simply: continue expanding/flattening the JSON file untill you reach the leaves or keys that have non-list and non-dict values. 
+The script uses a recursive function to parse the nested JSON files. The idea behind recursive funciton is fairly simple: continue expanding/flattening the JSON file untill you reach the leaves or keys that have non-list and non-dict values. 
