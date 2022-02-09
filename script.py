@@ -29,17 +29,20 @@ for folder in folders:
 
                 if type(json_object) is dict:
 
-                    for key in json_object:
+                    for index,key in enumerate(json_object):
                         parse_json_recursively(json_object[key])
 
                         if (type(json_object[key]) is not dict) and (type(json_object[key]) is not list):
                             #if key=='timestamp':
                                 #continue
-                            if key in dic:
+                            if key not in dic:
+                                dic[key]=[]
+
+                            if index==0:
+                                dic[key].append(json_object[key])
+                            elif key in dic:
                                 dic[key].append(json_object[key])
 
-                            else:
-                                dic[key]=[]
 
 
                 elif type(json_object) is list:
